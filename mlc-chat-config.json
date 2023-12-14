@@ -1,0 +1,29 @@
+{
+    "model_type": "llama",
+    "quantization": "q4f16_1",
+    "version": "0.1.0",
+    "model_config": {
+      "hidden_size": 4096,
+      "intermediate_size": 11008
+    },
+    "vocab_size": 32000,
+    "context_window_size": 4096,
+    "sliding_window_size": -1,
+    "prefill_chunk_size": 4096,
+    "tensor_parallel_shards": 1,
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "tokenizer_files": [
+      "tokenizer.model",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "mean_gen_len": 128,
+    "max_gen_len": 512,
+    "shift_fill_factor": 0.3,
+    "temperature": 0.6,
+    "repetition_penalty": 1.0,
+    "top_p": 0.9,
+    "conv_template": "llama-2"
+  }
