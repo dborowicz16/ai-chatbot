@@ -35,28 +35,22 @@ function App() {
     chat.setInitProgressCallback((report) => {
       dispatch({ type: 'response', payload: report.text });
     });
-    // chat.reload("Llama-2-7b-chat-hf-q4f32_1", undefined, json);
   }
 
   async function makePrompt() {
     const reply = await chat.generate(prompt);
     dispatch({ type: 'response', payload: reply });
-    // const prompt1 = "Can you write a poem about it?";
-    // setLabel("prompt-label", prompt1);
-    // const reply1 = await chat.generate(prompt1, generateProgressCallback);
-    // console.log(reply1);
-    // console.log(await chat.runtimeStatsText());
   }
 
 
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col">      
       {/* Switched to utilizing Shadow DOM for improved performance */}
       <p className='text-white'>
         {response}
       </p>
-      <input type="text" id="prompt" value={prompt} onChange={(e) => dispatch({ type: 'prompt', payload: e.target.value })} />
+      <input className="text-yellow" type="text" id="prompt" value={prompt} onChange={(e) => dispatch({ type: 'prompt', payload: e.target.value })} />
     </div>
   );
 }

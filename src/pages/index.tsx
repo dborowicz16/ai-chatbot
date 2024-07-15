@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24`}
+        className={`flex min-h-screen flex-col items-center justify-between pt-24 h-screen`}
       >
           <ChatComponent />
       </main>
